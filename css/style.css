@@ -8,8 +8,10 @@
 
 }
 
+/* se utiliza el font size para que la escala rem sea más exacta  además se le agrega al html una fuente llamada krub  */
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
 
     .krub-bold {
         font-family: "Krub", sans-serif;
@@ -29,6 +31,7 @@ body {
 }
 
 
+
 .titulo {
     text-align: center;
     font-size: 3.8rem;
@@ -39,15 +42,72 @@ body {
     font-size: 2rem;
 }
 
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
 header {
     background-color: var(--gris);
 
 }
 
-.barradenavegacion {
+.barradenavegacion  {
     background-color: var(--secundario);
+   
+    display: flex;
+     /*justify-content: space-around;
+     el espacio que tiene atras se suma al espacio que tiene adelante esto hace que el contenido del fondo sea un poco más largo que el de los costados */
+    /* justify-content: space-evenly;
+     deja la misma cantidad de espacio tanto atras como adelante  */
+     justify-content: space-between; 
+    /* el espacio tando del inicio como del final es mucho más corto que el contenido que tiene entre ellos */
+    /* align-items: ; esto sirve para cuando se tiene que organizar columnas  */
 }
 
-a {
+a  {
+    color: var(--blanco);
+     padding: 1rem;
     text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    
+    
 }
+
+a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+    
+}
+
+ body {
+        background-color: greenyellow;
+    }
+
+ /*para celular*/
+@media (min-width: 480px) {
+    body {
+        background-color: red;
+        font-size: 2rem;
+    }
+}
+
+/*para tablets*/
+@media (min-width: 768px) {
+    body {
+        background-color: rgb(248, 248, 248);
+    }
+}
+
+.hero {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+  .centro {
+    text-align: center;
+
+  }
